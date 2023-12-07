@@ -3,8 +3,8 @@ Database Application For Tunes - Metadata Scraper Script
 
 Author(s): Melesio Albavera <ma6hv@mst.edu>
 Created: 25 Novemeber 2023
-Updated: 6 December 2023
-Version: 0.0
+Updated: 7 December 2023
+Version: 1.0
 Description:
     A script that utilizes the Invidious and Spotify Application Programming 
     Interfaces in order to compile and submit musical metadata to the Database
@@ -78,9 +78,10 @@ def create_submission(
     while invidious_search_result.status_code != 200:
         try:
             invidious_search_result = requests.get(
-                'https://vid.puffyan.us/api/v1/search/'
-                f'?q={song_name.translate(encoded_characters)}'
-                f'%20{artist.translate(encoded_characters)}&type=video'
+                'https://vid.puffyan.us/api/v1/search/?q='
+                f'{song_name.replace("\'", "").translate(encoded_characters)}'
+                f'%20{artist.replace("\'", "").translate(encoded_characters)}'
+                '&type=video'
             )
         except:
             print('Waiting out Invidious (for a minute.)')
