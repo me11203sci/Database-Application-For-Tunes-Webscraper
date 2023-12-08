@@ -34,9 +34,8 @@ Begin by cloning the repository to your local machine.
 Before running the script, you need to provide valid Spotify application credentials in order
 to make calls to the Spotify A.P.I.:
 1. Begin by creating a Spotify Developer Account [here](https://developer.spotify.com/).
-2. Once you have logged in, go to the [Developer Dashboard](https://developer.spotify.com/dashboard) and create a new application.
-  - Be sure to select the tickbox labeled "Web API".
-1. Wait a bit for your application to be approved. Once that happens, open the application settings. Here you should be able to see both your Client ID and a Client Secret.
+2. Once you have logged in, go to the [Developer Dashboard](https://developer.spotify.com/dashboard) and create a new application. Be sure to select the tickbox labeled "Web API".
+3. Wait a bit for your application to be approved. Once that happens, open the application settings. Here you should be able to see both your Client ID and a Client Secret.
 
 Finally, create a `.env` file in the project repository structured as follows:
 
