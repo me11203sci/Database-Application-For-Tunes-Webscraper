@@ -13,6 +13,8 @@ Notes:
     Still squashing request timeout bugs.
     Additionally, still noticing missing tracks from large albums (The Beatle's
     discography.)
+    Currently only one audio source is hashed for the purposes of
+    demonstration.
 '''
 from alive_progress import alive_bar, alive_it
 from dotenv import dotenv_values, find_dotenv
@@ -42,7 +44,43 @@ def create_submission(
     filename: int
 ) -> None:
     '''
-    TO-DO: Numpy-Style Docstring
+    Takes metadata about a song, uses it to find appropriate audio source(s),
+    hashes them, then stores everything in JavaScript Object Notation.
+    
+    Parameters
+    ----------
+    artist : str
+        Primary artist for a song, used as part of the query for the audio
+        source.
+
+    genres : list[str]
+        List of associated genres.
+
+    album : str
+        Album on which a given track is included.
+
+    total_tracks : int
+        Total number of tracks on the the associated album.
+
+    image_link : str
+        Uniform Resource Locator for the associated album cover art.
+
+    release_year : str
+        The year that a given album was released.
+
+    song_name : str
+        Name of the track.
+
+    track_number : int
+        Placement in the tracklist of the current track.
+
+    filename : int
+        Unique and simple filename.
+
+    Returns
+    ----------
+    None
+        Instead, the file './output/<filename>.json' is created.
     '''
     # Check if the file already exists.
     if isfile(f'output/{filename:016}.json'):
