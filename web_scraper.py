@@ -21,7 +21,7 @@ from dotenv import dotenv_values, find_dotenv
 import hashlib
 import json
 from more_itertools import chunked
-from multiprocessing import Pool
+from multiprocessing import cpu_count, Pool
 from mutagen.easyid3 import EasyID3
 from os import mkdir, remove
 from os.path import isdir, isfile, getsize
@@ -335,7 +335,7 @@ if __name__ == '__main__':
                     ) for track in album['tracks']['items']
                 ]
 
-                with Pool(16) as pool:
+                with Pool(cpu_count()) as pool:
                     pool.starmap(create_submission, tracklist)
                     progress_bar()
 
