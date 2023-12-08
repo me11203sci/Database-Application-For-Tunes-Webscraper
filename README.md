@@ -56,7 +56,7 @@ python web_scraper.py [PATH TO GENRE LIST]
 The genre list is a text file that contains a list of genres to query (one genre per return sperated line), 
 from which the discographies of the top 50 artists will be compiled.
 
-As a final note, while the script is running the project directory should look something like following:.
+As a final note, while the script is running the project directory should look something like following:
 
 ```
 .
