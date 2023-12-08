@@ -1,0 +1,16 @@
+name: daft_dev
+channels: 
+  - conda-forge
+  - pypi
+dependencies:
+  - alive-progress>=3.1.5
+  - more-itertools>=10.1.0
+  - mutagen>=1.47.0
+  - pip>=23.3.1
+  - python>=3.12
+  - python-dotenv>=1.0.0
+  - requests>=2.31.0
+  - yt-dlp>=2023.11.16
+  - pip:
+    - mysql-connector
+    - mysql-connector-python

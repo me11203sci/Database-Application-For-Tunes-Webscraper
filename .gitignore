@@ -1,2 +1,5 @@
 .env
 *.json
+*.mp3
+output/
+temp/
