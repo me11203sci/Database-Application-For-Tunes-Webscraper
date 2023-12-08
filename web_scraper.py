@@ -23,7 +23,7 @@ import json
 from more_itertools import chunked
 from multiprocessing import cpu_count, Pool
 from mutagen.easyid3 import EasyID3
-from os import mkdir, remove
+from os import cpu_count, mkdir, remove
 from os.path import isdir, isfile, getsize
 import requests
 import sys
